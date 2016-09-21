@@ -3,13 +3,235 @@ extends _layouts/base
 include _modules/link/link
 
 block content
-  .container
-    .yeogurt-info
-      h1 Welcome to Nelson Yeogurt!
-      p.
-        Take a look at the
-        #[+link({text: 'documentation'})(href='https://github.com/larsonjj/generator-yeogurt#yeogurt-generator---')]
-        and start mixing up something awesome.
-      p
-        img.logo(src="images/yeogurt-swirl.png", width="75px")
-  code.version v1.5.3
+  div(data-sticky-container='')
+    .title-bar(data-sticky='', data-options='marginTop:0;', data-stick-to='top', style='width:100%')
+      .title-bar-left
+        a(href='/')
+          img(src='images/logo_bordeau_white.svg', width='100px', alt='')
+      .title-bar-right
+        ul.menu.align-right
+          li
+            a(href='https://www.facebook.com/DigitalYou')
+              img(src='images/facebook.png', alt='')
+          li
+            a(href='https://www.linkedin.com/company/digital-&-you')
+              img(src='images/linkedin.png', alt='')
+          li
+            a(href='https://twitter.com/DigitalandYou')
+              img(src='images/twitter.png', alt='')
+  #block-presentation
+    .row.align-middle.align-center
+      .columns.small-4.text-center
+        img(src='images/logo_bordeau_white.svg', width='300px')
+        h1 Change the code
+  section
+    header
+      .row
+        .column.shrink.section-header
+          h2
+            | Clients
+            img.ideogram(src='images/clients/clients_title.svg')
+        .column
+          .separation-line
+    .row
+      .column.small-12.clients-content
+        .row.align-center.text-center
+          .column.small-6.medium-3.logo
+            img(src='images/clients/axa.svg')
+          .column.small-6.medium-3.logo
+            img.reduced(src='images/clients/societe_generale.svg')
+          .column.small-6.medium-3.logo
+            img(src='images/clients/bnp.svg')
+          .column.small-6.medium-3.logo
+            img(src='images/clients/SNCF.svg')
+          .column.small-6.medium-3.logo
+            img(src='images/publicis_logo.svg')
+          .column.small-6.medium-3.logo
+            img(src='images/clients/seloger.png')
+          .column.small-6.medium-3.logo
+            img.reduced(src='images/clients/deezer.svg')
+          .column.small-6.medium-3.logo
+            img(src='images/clients/backelite.png')
+          .column.small-6.medium-3.logo
+            img.reduced(src='images/clients/Le_Monde.svg')
+          .column.small-6.medium-3.logo
+            img(src='images/clients/fdj.svg')
+          .column.small-6.medium-3.logo
+            img(src='images/clients/molotov.png')
+          .column.small-6.medium-3.logo
+            img.reduced(src='images/clients/docapost.png')
+  section
+    header
+      .row
+        .column
+          .separation-line
+        .column.shrink.section-header
+          h2
+            | Technologies
+            img.ideogram(src='images/technologies/technologies_title.svg')
+    .row
+      .column.small-12
+        .row.align-center.text-center.align-middle
+          .column.small-6.medium-3.logoTech.flexCol
+            img(src='images/technologies/angular-icon.svg', width='60')
+            h4 Angular 1
+          .column.small-6.medium-3.logoTech.flexCol
+            img(src='images/technologies/docker.png', width='100')
+            h4 Docker
+          .column.small-6.medium-3.logoTech.flexCol
+            img.increase(src='images/technologies/nodejs-logo.svg', width='130')
+            h4 Nodejs
+          .column.small-6.medium-3.logoTech.flexCol
+            img(src='images/technologies/webpack.svg', width='100')
+            h4 Webpack
+          .column.small-6.medium-3.logoTech.flexCol
+            img(src='images/technologies/react.svg', width='100')
+            h4 React
+          .column.small-6.medium-3.logoTech.flexCol
+            img.reducedLittle(src='images/technologies/algolia-light.png', width='120')
+            h4 Algolia
+          .column.small-6.medium-3.logoTech.flexCol
+            img.increase(src='images/technologies/electron.png', width='90')
+            h4 Electron
+          .column.small-6.medium-3.logoTech.flexCol
+            img.increase(src='images/technologies/firebase.png', width='120')
+            h4 Firebase
+          .column.small-6.medium-3.logoTech.flexCol
+            img(src='images/technologies/mongodb.jpg', width='160')
+            h4 Mongodb
+          .column.small-6.medium-3.logoTech.flexCol
+            img(src='images/technologies/php7.png', width='120')
+            h4 Php7
+          .column.small-6.medium-3.logoTech.flexCol
+            img(src='images/technologies/java.png', width='140')
+            h4 Java
+          .column.small-6.medium-3.logoTech.flexCol
+            img(src='images/technologies/Swift_logo.svg', width='100')
+            h4 Swift
+          .column.small-6.medium-3.logoTech.flexCol
+            img(src='images/technologies/android.svg', width='100')
+            h4 Android
+          .column.small-6.medium-3.logoTech.flexCol
+            img(src='images/technologies/javascript.svg', width='100')
+            h4 Javascript
+          .column.small-6.medium-3.logoTech.flexCol
+            img(src='images/technologies/Microsoft.svg', width='100')
+            h4 Microsoft.Net
+          .column.small-6.medium-3.logoTech.flexCol
+            img(src='images/technologies/apple.png', width='50')
+            h4 IOS
+  section
+    header
+      .row
+        .column.shrink.section-header
+          h2
+            | Suivez-nous
+            img.ideogram(src='images/followus/suivez-nous_title.svg')
+        .column
+          .separation-line
+    .row
+      .column.small-12
+        .row
+          .vignette-container.small-6.medium-3.large-2.text-center
+            .vignette
+              div
+                img(src='http://pbs.twimg.com/profile_images/725340152864841730/ypEqG_7s.jpg', alt='')
+                .icon
+                  img(src='images/followus/twitter.svg')
+              a(href='') Nous accueillerons le prochain Meetup #E...
+          .vignette-container.small-6.medium-3.large-2.text-center
+            .vignette
+              div
+                img(src='http://pbs.twimg.com/profile_images/725340152864841730/ypEqG_7s.jpg', alt='')
+                .icon
+                  img(src='images/followus/twitter.svg')
+              a(href='') #AngularJS Controller As Syntax : https:...
+          .vignette-container.small-6.medium-3.large-2.text-center
+            .vignette
+              div
+                img(src='http://pbs.twimg.com/profile_images/725340152864841730/ypEqG_7s.jpg', alt='')
+                .icon
+                  img(src='images/followus/twitter.svg')
+              a(href='') Nous accueillerons le prochain Meetup #E...
+          .vignette-container.small-6.medium-3.large-2.text-center
+            .vignette
+              div
+                img(src='http://pbs.twimg.com/profile_images/725340152864841730/ypEqG_7s.jpg', alt='')
+                .icon
+                  img(src='images/followus/twitter.svg')
+              a(href='') Nous accueillerons le prochain Meetup #E...
+          .vignette-container.small-6.medium-3.large-2.text-center
+            .vignette
+              div
+                img(src='http://pbs.twimg.com/profile_images/725340152864841730/ypEqG_7s.jpg', alt='')
+                .icon
+                  img(src='images/followus/twitter.svg')
+              a(href='') Nous accueillerons le prochain Meetup #E...
+          .vignette-container.small-6.medium-3.large-2.text-center
+            .vignette
+              div
+                img(src='http://pbs.twimg.com/profile_images/725340152864841730/ypEqG_7s.jpg', alt='')
+                .icon
+                  img(src='images/followus/twitter.svg')
+              a(href='') Nous accueillerons le prochain Meetup #E...
+          .vignette-container.small-6.medium-3.large-2.text-center
+            .vignette
+              div
+                img(src='http://pbs.twimg.com/profile_images/725340152864841730/ypEqG_7s.jpg', alt='')
+                .icon
+                  img(src='images/followus/twitter.svg')
+              a(href='') Nous accueillerons le prochain Meetup #E...
+          .vignette-container.small-6.medium-3.large-2.text-center
+            .vignette
+              div
+                img(src='http://pbs.twimg.com/profile_images/725340152864841730/ypEqG_7s.jpg', alt='')
+                .icon
+                  img(src='images/followus/twitter.svg')
+              a(href='') #AngularJS Controller As Syntax : https:...
+          .vignette-container.small-6.medium-3.large-2.text-center
+            .vignette
+              div
+                img(src='http://pbs.twimg.com/profile_images/725340152864841730/ypEqG_7s.jpg', alt='')
+                .icon
+                  img(src='images/followus/twitter.svg')
+              a(href='') Nous accueillerons le prochain Meetup #E...
+          .vignette-container.small-6.medium-3.large-2.text-center
+            .vignette
+              div
+                img(src='http://pbs.twimg.com/profile_images/725340152864841730/ypEqG_7s.jpg', alt='')
+                .icon
+                  img(src='images/followus/twitter.svg')
+              a(href='') Nous accueillerons le prochain Meetup #E...
+          .vignette-container.small-6.medium-3.large-2.text-center
+            .vignette
+              div
+                img(src='http://pbs.twimg.com/profile_images/725340152864841730/ypEqG_7s.jpg', alt='')
+                .icon
+                  img(src='images/followus/twitter.svg')
+              a(href='') Nous accueillerons le prochain Meetup #E...
+          .vignette-container.small-6.medium-3.large-2.text-center
+            .vignette
+              div
+                img(src='http://pbs.twimg.com/profile_images/725340152864841730/ypEqG_7s.jpg', alt='')
+                .icon
+                  img(src='images/followus/twitter.svg')
+              a(href='') Nous accueillerons le prochain Meetup #E...
+  section
+    header
+      .row
+        .column.shrink.section-header
+          h2
+            | Témoignages des Devs
+            img.ideogram(src='images/temoignages/temoignages_title.svg')
+        .column
+          .separation-line
+    .row
+      .columns.small-12.medium-6
+        .media-object
+          .media-object-section
+            .thumbnail
+              img(src='images/temoignages/jp.png')
+          .media-object-section
+            h4 Dreams feel real while we're in them.
+            p
+              | I'm going to improvise. Listen, there's something you should know about me... about inception. An idea is like a virus, resilient, highly contagious. The smallest seed of an idea can grow. It can grow to define or destroy you.
