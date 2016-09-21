@@ -1,0 +1,17 @@
+// vignette styles
+
+.vignette {
+  position: relative;
+  margin: 8px 4px;
+  padding: 10px;
+  border: 1px solid black;
+
+
+  .icon {
+    height: 2.5rem;
+    width: 2.5rem;
+    position: absolute;
+    top: 1rem;
+    left: 1rem;
+  }
+}

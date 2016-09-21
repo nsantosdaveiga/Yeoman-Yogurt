@@ -1,4 +1,5 @@
 @import "../../node_modules/foundation-sites/scss/foundation";
+@import '../_modules/vignette/vignette';
 
 @include foundation-everything(true);
 
@@ -34,22 +35,6 @@ img {
 .ideogram {
   width: 50px;
   margin: 0 0 0 40px;
-}
-
-.vignette {
-  position: relative;
-  margin: 8px 4px;
-  padding: 10px;
-  border: 1px solid black;
-
-
-  .icon {
-    height: 2.5rem;
-    width: 2.5rem;
-    position: absolute;
-    top: 1rem;
-    left: 1rem;
-  }
 }
 
 .separation-line {

@@ -1,6 +1,7 @@
 extends _layouts/base
 
 include _modules/link/link
+include _modules/vignette/vignette
 
 block content
   div(data-sticky-container='')
@@ -132,90 +133,17 @@ block content
     .row
       .column.small-12
         .row
-          .vignette-container.small-6.medium-3.large-2.text-center
-            .vignette
-              div
-                img(src='http://pbs.twimg.com/profile_images/725340152864841730/ypEqG_7s.jpg', alt='')
-                .icon
-                  img(src='images/followus/twitter.svg')
-              a(href='') Nous accueillerons le prochain Meetup #E...
-          .vignette-container.small-6.medium-3.large-2.text-center
-            .vignette
-              div
-                img(src='http://pbs.twimg.com/profile_images/725340152864841730/ypEqG_7s.jpg', alt='')
-                .icon
-                  img(src='images/followus/twitter.svg')
-              a(href='') #AngularJS Controller As Syntax : https:...
-          .vignette-container.small-6.medium-3.large-2.text-center
-            .vignette
-              div
-                img(src='http://pbs.twimg.com/profile_images/725340152864841730/ypEqG_7s.jpg', alt='')
-                .icon
-                  img(src='images/followus/twitter.svg')
-              a(href='') Nous accueillerons le prochain Meetup #E...
-          .vignette-container.small-6.medium-3.large-2.text-center
-            .vignette
-              div
-                img(src='http://pbs.twimg.com/profile_images/725340152864841730/ypEqG_7s.jpg', alt='')
-                .icon
-                  img(src='images/followus/twitter.svg')
-              a(href='') Nous accueillerons le prochain Meetup #E...
-          .vignette-container.small-6.medium-3.large-2.text-center
-            .vignette
-              div
-                img(src='http://pbs.twimg.com/profile_images/725340152864841730/ypEqG_7s.jpg', alt='')
-                .icon
-                  img(src='images/followus/twitter.svg')
-              a(href='') Nous accueillerons le prochain Meetup #E...
-          .vignette-container.small-6.medium-3.large-2.text-center
-            .vignette
-              div
-                img(src='http://pbs.twimg.com/profile_images/725340152864841730/ypEqG_7s.jpg', alt='')
-                .icon
-                  img(src='images/followus/twitter.svg')
-              a(href='') Nous accueillerons le prochain Meetup #E...
-          .vignette-container.small-6.medium-3.large-2.text-center
-            .vignette
-              div
-                img(src='http://pbs.twimg.com/profile_images/725340152864841730/ypEqG_7s.jpg', alt='')
-                .icon
-                  img(src='images/followus/twitter.svg')
-              a(href='') Nous accueillerons le prochain Meetup #E...
-          .vignette-container.small-6.medium-3.large-2.text-center
-            .vignette
-              div
-                img(src='http://pbs.twimg.com/profile_images/725340152864841730/ypEqG_7s.jpg', alt='')
-                .icon
-                  img(src='images/followus/twitter.svg')
-              a(href='') #AngularJS Controller As Syntax : https:...
-          .vignette-container.small-6.medium-3.large-2.text-center
-            .vignette
-              div
-                img(src='http://pbs.twimg.com/profile_images/725340152864841730/ypEqG_7s.jpg', alt='')
-                .icon
-                  img(src='images/followus/twitter.svg')
-              a(href='') Nous accueillerons le prochain Meetup #E...
-          .vignette-container.small-6.medium-3.large-2.text-center
-            .vignette
-              div
-                img(src='http://pbs.twimg.com/profile_images/725340152864841730/ypEqG_7s.jpg', alt='')
-                .icon
-                  img(src='images/followus/twitter.svg')
-              a(href='') Nous accueillerons le prochain Meetup #E...
-          .vignette-container.small-6.medium-3.large-2.text-center
-            .vignette
-              div
-                img(src='http://pbs.twimg.com/profile_images/725340152864841730/ypEqG_7s.jpg', alt='')
-                .icon
-                  img(src='images/followus/twitter.svg')
-              a(href='') Nous accueillerons le prochain Meetup #E...
-          .vignette-container.small-6.medium-3.large-2.text-center
-            .vignette
-              div
-                img(src='http://pbs.twimg.com/profile_images/725340152864841730/ypEqG_7s.jpg', alt='')
-                .icon
-                  img(src='images/followus/twitter.svg')
-              a(href='') Nous accueillerons le prochain Meetup #E...
+          - var n = 0;
+            while n < 8
+              +vignette(
+                {
+                  "__class": "testLink",
+                  "__img": 'http://pbs.twimg.com/profile_images/725340152864841730/ypEqG_7s.jpg',
+                  "__ico": 'images/followus/twitter.svg',
+                  "__text": "Nous accueillerons le prochain Meetup #Eb...",
+                  "__id" :  n++
+                }
+              )
   section
     header
       .row

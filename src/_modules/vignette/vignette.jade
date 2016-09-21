@@ -1,0 +1,11 @@
+mixin vignette(spec)
+  - spec = spec || {}
+  - spec.__class = spec.__class || ''
+
+    .vignette-container.small-6.medium-3.large-2.text-center(id="moi")
+      .vignette
+        div
+          img(src=spec.__img, alt='')
+          .icon
+            img(src=spec.__ico)
+        a(href='')= spec.__text
